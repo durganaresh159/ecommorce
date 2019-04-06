@@ -9,7 +9,9 @@
    http://www.springframework.org/schema/mvc 
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<context:component-scan base-package="com.onlineshopping.controller" />
+	<context:component-scan base-package="com.onlineshopping" />
+	<context:component-scan base-package="com.ecom.shopping.backend" />
+
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/Views/" />
@@ -18,6 +20,5 @@
 
 	<!--loading static resources -->
 	<mvc:annotation-driven></mvc:annotation-driven>
-    <mvc:resources location="/assets/" mapping="/resources/**"></mvc:resources>
-
+	<mvc:resources location="/assets/" mapping="/resources/**"></mvc:resources>
 </beans>
